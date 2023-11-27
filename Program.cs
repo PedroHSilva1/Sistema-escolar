@@ -108,7 +108,7 @@ namespace Sistema
             Console.WriteLine("\nDigite um número para contato");
             this.contato = Console.ReadLine();
             Console.WriteLine("\nselecione a funcao a ser exercida: 1- coordenação. 2- Professor");
-            double selecao = Int32.Parse(Console.ReadLine());
+            int selecao = Int32.Parse(Console.ReadLine());
 
             switch (selecao)
             {
@@ -180,20 +180,20 @@ namespace Sistema
             {
                 Console.Clear();
                 Console.WriteLine("Boas vindas " + nomeAluno);
-                /* aqui haverá VerNotas;;, Ver Calendario, VerObservacoes, VerPresenças*/
+                /* aqui haverá VerNotas;;, Ver Calendario, VerObservacoes, VerPresenças;;*/
             }else 
             if (confUser == nomeCoor && confPassw == senhaCoor)
             {
                 Console.Clear();
                 Console.WriteLine("Boas vindas Coordenador(a)");
-                /* aq haverá Cadastro de alunos e funcionarios;;, LançarObservacoes, AjustarCalendario, Lançar atestados*/
+                /* aq haverá Cadastro de alunos e funcionarios;;, LançarObservacoes, AjustarCalendario*/
             }else
             if (confUser == nomeProf && confPassw == senhaProf)
             {
                 
                 Console.Clear();
                 Console.WriteLine("Boas vindas Professor(a)");
-                /*Aq haverá MarcarPresença, LançarObservacoes,AdcionarNota;;*/
+                /*Aq haverá MarcarPresença;;, LançarObservacoes,AdcionarNota;;*/
             }
              else
              {
@@ -223,7 +223,7 @@ namespace Sistema
             Console.Clear();
             
             Console.WriteLine("Notas de "+Nome+":");
-
+            /*trocar semestre para unidade*/
             for (int semestre = 0; semestre < 2; semestre++)
             {
                 Console.WriteLine("Semestre " + (semestre + 1) + ":");
@@ -273,6 +273,8 @@ namespace Sistema
             matematica.AddNota(2,3, 10);
 
             matematica.VerNotas();
+
+             
         }
 
 
