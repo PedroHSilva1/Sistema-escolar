@@ -182,7 +182,7 @@ namespace Sistema
         public void Sair()
         {
             Console.Clear();
-            Console.WriteLine("\nO sistema irá ser encerrado. Tem certeza que quer encerrar?(s/n");
+            Console.WriteLine("\nO sistema irá ser encerrado. Tem certeza que quer encerrar?(s/n)");
             confirma = Console.ReadLine();
             if (confirma == "s" || confirma == "S")
             {
@@ -214,7 +214,7 @@ namespace Sistema
             Console.Clear();
             Console.WriteLine("Boas vindas ao portal do aluno!");
             Console.WriteLine("Selecione a opção para a função desejada:");
-            Console.WriteLine("\n1- Verificar suas notas.\n2- Verificar calendário de presenças.\n3-Ver Observações.\n4-Encerrar sistema.");
+            Console.WriteLine("\n1- Verificar suas notas.\n2- Verificar calendário de presenças.\n3- Ver Observações.\n4- Encerrar sistema.");
             escolha = Int32.Parse(Console.ReadLine());
 
             switch (escolha)
@@ -257,7 +257,7 @@ namespace Sistema
             Console.Clear();
             Console.WriteLine("Boas vindas ao portal do professor!");
             Console.WriteLine("Selecione a opção para a função desejada:");
-            Console.WriteLine("\n1- Lançar notas.\n2- Adicionar falta ou presença.\n3-lançar Observações.\n4-Encerrar sistema.");
+            Console.WriteLine("\n1- Lançar notas.\n2- Adicionar falta ou presença.\n3- Lançar Observações.\n4- Encerrar sistema.");
             escolha = Int32.Parse(Console.ReadLine());
 
             switch (escolha)
@@ -328,7 +328,7 @@ namespace Sistema
             Console.Clear();
             Console.WriteLine("Boas vindas ao portal do Coordenador!");
             Console.WriteLine("Selecione a opção para a função desejada:");
-            Console.WriteLine("\n1- Cadastrar aluno.\n2- Cadastrar Funcionario.\n3-Lançar Observações.\n4-Encerrar sistema.");
+            Console.WriteLine("\n1- Cadastrar aluno.\n2- Cadastrar Funcionario.\n3- Lançar Observações.\n4- Encerrar sistema.");
             escolha = Int32.Parse(Console.ReadLine());
 
             switch (escolha)
@@ -457,7 +457,7 @@ namespace Sistema
             Console.WriteLine("\nIncrementador de nota");
             Console.WriteLine("\nDigite a unidade desejada: (1 ou 2)");
             int unidade = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Selecione o tipo de nota: \n\n1-Teste\n2-Trabalho\nProva");
+            Console.WriteLine("Selecione o tipo de nota: \n\n1- Teste\n2- Trabalho\n3- Prova");
             int tipoNota = Int32.Parse(Console.ReadLine());
             
             if (unidade < 1 || unidade > 2 || tipoNota < 1 || tipoNota > 3)
