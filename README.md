@@ -22,7 +22,31 @@ Patrícia Santos (PatríciaNFS)
 ## 3.1	Requisitos Funcionais:
 ### Requisitos técnicos para o software que compõe o sistema descreve as ações que o sistema deve ser capaz de executar.
 
+| Código | Identificação | Classificação | Objetivo |
+|--- |--- |--- |--- |
+| RF01 | Cadastrar usuários | Essencial | Permitir que novos usuários sejam registrados no sistema |
+| RF02 | Autenticar usuários | Essencial | Permitir que usuários registrados acessem o sistema |
+| RF03 | Sair do sistema | Essencial | Encerrar a seção de um usuário no sistema |
+| RF04 | Visualizar catálogo de curso | Importante | Permitir que usuários consultem a lista de disciplinas disponíveis |
+| RF05 | Matrícula do aluno | Importante | Permitir que alunos se matriculem nas turmas desejadas |
+| RF06 | Consultar rendimento do aluno | Importante | Permitir que professores verifiquem o desempenho dos alunos |
 
+
+## Requisitos Não funcionais
+ | Código | Identificação | Classificação | Objetivo |
+ |--- |--- |--- |--- |
+ | RNF01 | Disponibilidade | Essencial | Assegurar que o sistema esteja acessível e funcional a maior parte do tempo |
+ | RNF02 | Confidencialidade | Essencial | Proteger as informações sensíveis conta acesso não autorizado |
+ | RNF03 | Autenticação | Essencial | Verificar a identidade dos usuários que acessam o sistema |
+ | RNF04 | Integridade dos Dados | Essencial | Manter a precisão e constância dos dados armazenados |
+ | RNF05 | Backup de Dados | Essencial | Garantir a recuperação de dados em caso de perda ou corrupção. |
+ | RNF06 | Notificações | Essencial | Informar usuários sobre eventos importantes ou ações relevantes no sistema |
+ | RNF07 | Simplicidade | Essencial | Garantir que a interface e as funcionalidades sejam intuitivas e fácies de usar |
+ | RNF08 | Responsividade | Essencial | Garantir que o sistema responda rapidamente às solicitações dos usuários |
+ | RNF09 | Acessibilidade | Essencial | Garantir que o sistema seja acessível a usuários com diferentes necessidade e habilidades |
+ | RNF10 | LOG’s (Registros) | Desejável | Registrar eventos importantes para fins de auditoria, solução de problemas e segurança |
+ | RNF11 | Extensibilidade | Essencial | Facilitar a adição de novas funcionalidades ou integrações no futuro |
+ | RNF012 | Adaptabilidade | Essencial | Permitir que o sistema se ajuste a diferentes ambientes e requisitos |
 
 
 
