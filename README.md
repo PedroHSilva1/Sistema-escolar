@@ -27,7 +27,7 @@ Sistema escolar feito pelo grupo CodeTree ☘️
 | RF01 | Cadastrar usuários | Essencial[^1]. | Permitir que novos usuários sejam registrados no sistema |
 | RF02 | Autenticar usuários | Essencial | Permitir que usuários registrados acessem o sistema |
 | RF03 | Sair do sistema | Essencial | Encerrar a seção de um usuário no sistema |
-| RF04 | Visualizar catálogo de curso | Importante[^2]. | Permitir que usuários consultem a lista de disciplinas disponíveis |
+| RF04 | Visualizar matérias | Importante[^2]. | Permitir que usuários consultem a lista de matérias |
 | RF05 | Matrícula do aluno | Importante | Permitir que alunos se matriculem nas turmas desejadas |
 | RF06 | Consultar rendimento do aluno | Importante | Permitir que professores verifiquem o desempenho dos alunos |
 
