@@ -1,3 +1,5 @@
+using System.Numerics;
+
 class Presenca
     {
         private int[,] matrizPresenca; 
@@ -16,7 +18,8 @@ class Presenca
 
         public void MarcarPresencaM()
         {
-            Console.WriteLine("Insira o dia da presença:");
+            Console.Clear();
+            Console.WriteLine("\nInsira o dia da presença:");
             int dia = Int32.Parse(Console.ReadLine());
             MarcarPresenca(dia);
         }
@@ -27,6 +30,7 @@ class Presenca
         }
         public void MarcarFaltaM()
         {
+            Console.Clear();
             Console.WriteLine("Insira o dia da falta:");
             int dia = Int32.Parse(Console.ReadLine());
             MarcarFalta(dia);
@@ -39,6 +43,7 @@ class Presenca
 
         public void MarcarEspecialM()
         {
+            Console.Clear();
             Console.WriteLine("Insira o dia da falta justificada:");
             int dia = Int32.Parse(Console.ReadLine());
             MarcarEspecial(dia);

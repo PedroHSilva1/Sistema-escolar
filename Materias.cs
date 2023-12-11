@@ -27,13 +27,13 @@ class Materias
 
         public void AddNota()
         {
+            string confirma = "s";
             do
             {
-            Console.Clear();
-            Console.WriteLine("\nIncrementador de nota");
+            Console.WriteLine("--Incrementador de notas--");
             Console.WriteLine("\nDigite a unidade desejada: (1 ou 2)");
             int unidade = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Selecione o tipo de nota: \n\n1- Teste\n2- Trabalho\n3- Prova");
+            Console.WriteLine("\nSelecione o tipo de nota: \n\n1- Teste\n2- Trabalho\n3- Prova");
             int tipoNota = Int32.Parse(Console.ReadLine());
             
             if (unidade < 1 || unidade > 2 || tipoNota < 1 || tipoNota > 3)
@@ -41,17 +41,13 @@ class Materias
                 Console.WriteLine("Unidade ou tipo de nota inválido");
                 AddNota();
             }
-            Console.WriteLine("Insira a nota:");
+            Console.WriteLine("\nInsira a nota:");
             double nota = Int32.Parse(Console.ReadLine());
             Notas[unidade - 1, tipoNota - 1] = nota;
            
-            Console.WriteLine("Deseja adicionar mais alguma nota?");
-            string confirma = Console.ReadLine();
-            if (confirma !="s"|| confirma != "S" )
-            {
-                
-            }
-            } while (true);
+            Console.WriteLine("\nDeseja adicionar mais alguma nota?(S/N)");
+            confirma = Console.ReadLine();
+            } while (confirma == "s"|| confirma == "S");
         }
 
         private string PegarNomeNota(int tipoNota)

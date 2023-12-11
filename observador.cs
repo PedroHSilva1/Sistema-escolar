@@ -4,7 +4,8 @@ class Observador
         
         public void VerObserv()
         {
-            Console.WriteLine("\nObservações:");
+            Console.Clear();
+            Console.WriteLine("Observações:");
 
             if (observacoes.Count == 0)
             {
@@ -22,8 +23,9 @@ class Observador
 
         public void AddObserv()
         {
-            Console.WriteLine("\n--Adicionar Observação--");
-            Console.WriteLine("Digite a Observação:");
+            Console.Clear();
+            Console.WriteLine("--Adicionar Observação--");
+            Console.WriteLine("\nDigite a Observação a ser adicionada:");
 
             string novaObservacao = Console.ReadLine();
 

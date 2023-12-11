@@ -11,7 +11,7 @@ class Login
 
         public void Logar()
         {
-            Console.WriteLine("Bem vindo ao sistema CodeTree, faça o login");
+            Console.WriteLine("Boas vindas ao sistema CodeTree, faça o login");
             Console.WriteLine("\nInsira o seu nome de usuário:");
             confUser = Console.ReadLine();
             Console.WriteLine("\nInsira sua senha:");

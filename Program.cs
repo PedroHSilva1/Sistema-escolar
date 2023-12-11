@@ -7,6 +7,7 @@ namespace Sistema
     {
         static void Main(string[] args)
         {
+            Console.Clear();
             Login login = new Login();
             login.Logar();
         }

@@ -4,6 +4,7 @@
         public double idade { get; set; }
         private string cpf { get; set; }
         public string contato { get; set; }
+        
 
         public string Cpf
         {
@@ -13,9 +14,30 @@
         public abstract void Cadastrar();
         public void DefinirCpf()
         {
-            Console.WriteLine("\nDigite o CPF");
-            cpf = Console.ReadLine();
+            do
+            {   
+                Console.Clear();
+                Console.WriteLine("Digite o CPF (Apenas números):");
+                cpf = Console.ReadLine();
+
+            } while (!VerificadorDigitos(cpf, 11));
         }
+        
+        public void VerificarCell()
+        {
+            do
+            { 
+                Console.Clear();
+                Console.Write("Insira o número do celular para contato: ");
+                contato = Console.ReadLine();
+
+            } while (!VerificadorDigitos(contato, 11));
+        }
+
+    static bool VerificadorDigitos(string numero, int quantidade)
+    {
+        return numero.Length == quantidade && numero.All(char.IsDigit);
+    }
     }
     internal class CadastroAluno : Cadastro
     {
@@ -41,8 +63,8 @@
                 DefinirCpf();
             }
 
-            Console.WriteLine("\nDigite um número para contato");
-            this.contato = Console.ReadLine();
+            VerificarCell();
+
             Console.WriteLine("\nDigite a Série do aluno");
             this.serie = Console.ReadLine();
             Console.WriteLine("\nDigite o nível do aluno");
@@ -90,8 +112,7 @@
             Console.WriteLine("\nInsira a idade de " + this.nome);
             this.idade = Int32.Parse(Console.ReadLine());
             DefinirCpf();
-            Console.WriteLine("\nDigite um número para contato");
-            this.contato = Console.ReadLine();
+            VerificarCell();
             Console.WriteLine("\nselecione a funcao a ser exercida: 1- coordenação. 2- Professor");
             int selecao = Int32.Parse(Console.ReadLine());
 

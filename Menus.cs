@@ -17,6 +17,22 @@
                 Sair();
             }
         }
+        public void VoltarLogin(){
+
+            Console.Clear();
+            Console.WriteLine("\nDeseja logar-se novamente?(S/N)");
+            string confirma = Console.ReadLine();
+            if (confirma == "s" || confirma == "S")
+            {
+                Console.Clear();
+                Login login01 = new Login();
+                login01.Logar();
+            }
+            else
+            {
+                Usuario();
+            }
+        }
         public void Sair()
         {
             Console.Clear();
@@ -47,7 +63,7 @@
             Console.Clear();
             Console.WriteLine("Boas vindas ao portal do aluno!");
             Console.WriteLine("Selecione a opção para a função desejada:");
-            Console.WriteLine("\n1- Verificar suas notas.\n2- Verificar calendário de presenças.\n3- Ver Observações.\n4- Encerrar sistema.");
+            Console.WriteLine("\n1- Verificar suas notas.\n2- Verificar calendário de presenças.\n3- Ver observações.\n4- Logar novamente\n5- Encerrar sistema.");
             escolha = Int32.Parse(Console.ReadLine());
 
             switch (escolha)
@@ -56,14 +72,14 @@
                     Materias materias01 = new Materias("");
                     materias01.Demonstrar();
                     Retornar();
-
                     break;
+
                 case 2:
                     Presenca presenca01 = new Presenca(6);
                     presenca01.demo();
                     Retornar();
-                    
                     break;
+
                 case 3:
                     Observador observador01 = new Observador();
                     observador01.VerObserv();
@@ -71,8 +87,13 @@
                     break;
 
                 case 4:
+                    VoltarLogin();
+                    break;
+
+                case 5:
                     Sair();
                     break;
+
                 default:
                     Usuario();
                     break;
@@ -84,25 +105,26 @@
     {
         public override void Usuario()
         {
-
+            Presenca presenca01 = new Presenca(6);
             Console.Clear();
             Console.WriteLine("Boas vindas ao portal do professor!");
             Console.WriteLine("Selecione a opção para a função desejada:");
-            Console.WriteLine("\n1- Lançar notas.\n2- Adicionar falta ou presença.\n3- Lançar Observações.\n4- Encerrar sistema.");
+            Console.WriteLine("\n1- Lançar notas.\n2- Adicionar falta ou presença.\n3- Lançar Observações.\n4- Logar novamente.\n5- Encerrar sistema.");
             escolha = Int32.Parse(Console.ReadLine());
 
             switch (escolha)
             {
                 case 1:
+                    Console.Clear();
                     Materias materias01 = new Materias("");
                     materias01.AddNota();
                     Retornar();
                     
                     break;
                 case 2:
-                    Presenca presenca01 = new Presenca(1);
+                    
                     Console.Clear();
-                    Console.WriteLine("Presença");
+                    Console.WriteLine("--Presença--");
                     Console.WriteLine("\nSelecione o que você deseja\n\n1- Adicionar presença.\n2- Adicionar falta.\n3- Adicionar falta justificada.\n4- Encerrar sistema");
                     escolha = Int32.Parse(Console.ReadLine());
 
@@ -136,8 +158,13 @@
                     Retornar();
                     break;
                 case 4:
+                    VoltarLogin();
+                    break;
+
+                case 5:
                     Sair();
                     break;
+
                 default:
                     Usuario();
                     break;
@@ -152,7 +179,7 @@
             Console.Clear();
             Console.WriteLine("Boas vindas ao portal do Coordenador!");
             Console.WriteLine("Selecione a opção para a função desejada:");
-            Console.WriteLine("\n1- Cadastrar aluno.\n2- Cadastrar Funcionario.\n3- Lançar Observações.\n4- Encerrar sistema.");
+            Console.WriteLine("\n1- Cadastrar aluno.\n2- Cadastrar Funcionario.\n3- Lançar Observações.\n4- Logar novamente.\n5- Encerrar sistema.");
             escolha = Int32.Parse(Console.ReadLine());
 
             switch (escolha)
@@ -161,23 +188,28 @@
                     CadastroAluno cadastroAluno = new CadastroAluno();
                     cadastroAluno.Cadastrar();
                     Retornar();
-
                     break;
+                    
                 case 2:
                     CadastroFuncionario cadastroFuncionario = new CadastroFuncionario();
                     cadastroFuncionario.Cadastrar();
                     Retornar();
-
                     break;
+
                 case 3:
                     Observador observador01 = new Observador();
                     observador01.AddObserv();
                     Retornar();
                     break;
 
-                case 4:
+                 case 4:
+                    VoltarLogin();
+                    break;
+
+                case 5:
                     Sair();
                     break;
+
                 default:
                     Usuario();
                     break;
