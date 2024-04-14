@@ -1,6 +1,5 @@
 # Proposta de Sistema Escolar
 Sistema escolar feito pelo grupo CodeTree ☘️
-- Beatriz Bezerra [GitHub](https://github.com/Trizzzb), 
 - Pedro Silva [GitHub](https://github.com/PedroHSilva1),
 - Patrícia Santos [GitHub](https://github.com/PatriciaNFS).
 
